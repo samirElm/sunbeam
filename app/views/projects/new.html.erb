@@ -5,6 +5,8 @@
     <%= simple_form_for(@project, url: projects_path) do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
+      <%= f.input :steps, label: "Les grandes étapes du projet" %>
+      <%= f.input :needs, label: "De quoi avez-vous besoin ?" %>
 
       <%= f.button :submit %>
     <% end %>

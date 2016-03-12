@@ -16,11 +16,11 @@ class ProjectsController < ApplicationController
     project = Project.create(refugee_id: current_refugee.id, title: params[:project][:title], description: params[:project][:description])
 
     if project.save
-      flash[:info] = "Merci, votre projet a été envoyé à XX"
+      flash[:notice] = "Merci, votre projet a été envoyé pour validation"
 
       redirect_to root_path
     else
-      flash[:info] = "Une erreur est survenue"
+      flash[:notice] = "Une erreur est survenue"
 
       redirect :back
     end
