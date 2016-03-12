@@ -107,11 +107,22 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    materialize-sass (0.97.5)
+      sass (~> 3.3)
     method_source (0.8.2)
     mime-types (2.99.1)
     mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    monetize (1.1.0)
+      money (~> 6.5.0)
+    money (6.5.1)
+      i18n (>= 0.6.4, <= 0.7.0)
+    money-rails (1.4.1)
+      activesupport (>= 3.0)
+      monetize (~> 1.1.0)
+      money (~> 6.5.0)
+      railties (>= 3.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
@@ -226,6 +237,8 @@ DEPENDENCIES
   high_voltage
   jquery-rails
   letter_opener
+  materialize-sass
+  money-rails
   paperclip
   pg
   pry-byebug

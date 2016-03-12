@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h1>Créer un nouveau projet</h1>
+
+    <%= simple_form_for(@project, url: projects_path) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :steps, label: "Les grandes étapes du projet" %>
+      <%= f.input :needs, label: "De quoi avez-vous besoin ?" %>
+      <%= f.input :total_budget, label: "Budget total" %>
+      <%= f.input :picture, as: :file, label: "Photo" %>
+
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h1>Liste des projets</h1>
+
+    <ul>
+      <% @projects.each do |project| %>
+        <li><%= link_to project.title, project_path(project) %></li>
+      <% end %>
+    </ul>
+
+    <div>
+      <% if refugee_signed_in? %>
+        <%= link_to "Créer un projet", new_project_path %>
+      <% end %>
+    </div>
+
+    <%= link_to "Se connecter - Refugee",  new_refugee_session_path %>
+    <br>
+    <%= link_to "Se déconnecter - Refugee",  destroy_refugee_session_path, method: :delete %>
+    <br>
+    <%= link_to "Se connecter - User",  new_user_session_path %>
+    <br>
+    <%= link_to "Se déconnecter - User",  destroy_user_session_path, method: :delete %>
+  </div>
+</div>
