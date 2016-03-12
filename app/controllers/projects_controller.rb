@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(refugee_id: current_refugee.id, title: params[:project][:title], description: params[:project][:description])
+    project = current_refugee.build_project(project_params)
 
     if project.save
       flash[:notice] = "Merci, votre projet a été envoyé pour validation"
@@ -30,6 +30,12 @@ class ProjectsController < ApplicationController
   end
 
   def update
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:title, :description, :needs, :steps, :picture)
   end
 
 end

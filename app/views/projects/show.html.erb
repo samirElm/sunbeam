@@ -1,5 +1,11 @@
-<h1>Projet n°<%= @project.id %></h1>
+<div class="container">
+  <div class="row">
+    <h1>Projet n°<%= @project.id %></h1>
 
-<h2><%= @project.title %></h2>
+    <h2><%= @project.title %></h2>
 
-<p><%= @project.description %></p>
+    <p><%= @project.description %></p>
+
+    <p><%= image_tag @project.picture.url(:medium) %></p>
+  </div>
+</div>
