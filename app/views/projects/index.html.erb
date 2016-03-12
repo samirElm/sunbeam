@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="row center-align">
-      <h1>Liste des projets</h1>
+      <h1>Rencontrez les <br> réfugiés-entrepreneurs</h1>
     </div>
 
     <% @projects.each do |project| %>
@@ -16,8 +16,8 @@
             <i class="material-icons right">more_vert</i></span>
             <div class="card-action">
               <div class="chip">
-                <img src="http://placehold.it/10x10" alt="Contact Person">
-                <% # project.refugee.first_name %>
+                <%= image_tag project.refugee.picture.url(:thumb) %>
+                <%= project.refugee.first_name %>
               </div>
               <div class="right">
                 <%= link_to project_path(project), class: "waves-effect waves-light btn small-font-button" do %>
@@ -47,12 +47,12 @@
     <% end %>
   </div>
 
-    <%= link_to "Se connecter - Refugee",  new_refugee_session_path %>
-    <br>
-    <%= link_to "Se déconnecter - Refugee",  destroy_refugee_session_path, method: :delete %>
-    <br>
-    <%= link_to "Se connecter - User",  new_user_session_path %>
-    <br>
-    <%= link_to "Se déconnecter - User",  destroy_user_session_path, method: :delete %>
+  <%= link_to "Se connecter - Refugee",  new_refugee_session_path %>
+  <br>
+  <%= link_to "Se déconnecter - Refugee",  destroy_refugee_session_path, method: :delete %>
+  <br>
+  <%= link_to "Se connecter - User",  new_user_session_path %>
+  <br>
+  <%= link_to "Se déconnecter - User",  destroy_user_session_path, method: :delete %>
 </div>
 
