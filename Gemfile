@@ -25,6 +25,7 @@ gem "devise-i18n-views"
 
 gem 'money-rails'
 gem 'materialize-sass'
+gem 'material_icons'
 
 group :development, :test do
   gem "spring"

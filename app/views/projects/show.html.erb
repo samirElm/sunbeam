@@ -1,13 +1,71 @@
 <div class="container">
   <div class="row">
-    <h1>Projet n°<%= @project.id %></h1>
+    <div class="center margin-bottom-large">
+      <h1><span class="up-title">Aidez <%= @project.refugee.first_name.capitalize %> à lancer son projet !</span> <br> <%= @project.title %></h1>
+    </div>
 
-    <h2><%= @project.title %></h2>
+    <div class="row">
+      <div class="col s12 m7">
+        <%= image_tag @project.picture.url(:large), class: "materialboxed width-100" %>
+      </div>
+      <div class="col s12 m5 center">
+        <%= image_tag "progress-circle.png", style: "width: 80%" %>
+        <p class="margin-top-medium">
+          Budget nécessaire : <%= @project.total_budget %>€
+        </p>
+        <form action="" class="margin-top-large">
+          <div class="donation_field">
+            <input type="text" name="donation_amount" id="donation_amount" class="donation_amount" autocomplete="off" maxlength="6">
+            <input type="submit" value="Contribuer" class="donate_button btn">
+          </div>
+        </form>
+      </div>
+    </div>
 
-    <p><%= @project.description %></p>
-
-    <p>Budget : <%= @project.total_budget %>€</p>
-
-    <p><%= image_tag @project.picture.url(:medium) %></p>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="margin-bottom-medium">
+          <h5 class="border-bottom-light padding-bottom-small">Description</h5>
+          <div class="chip">
+            <%= image_tag @project.refugee.picture.url(:thumb) %>
+            <%= @project.refugee.first_name %>
+          </div>
+          <p class="text-justify">
+            <%= @project.description %>
+          </p>
+        </div>
+        <div class="margin-bottom-medium">
+          <h5 class="border-bottom-light padding-bottom-small">Les étapes du projet</h5>
+          <p>
+            <%= @project.steps %>
+          </p>
+        </div>
+        <div class="margin-bottom-medium">
+          <h5 class="border-bottom-light padding-bottom-small">Ce dont <%= @project.refugee.first_name %> a besoin</h5>
+          <p>
+            <%= @project.needs %>
+          </p>
+        </div>
+        <button class="btn">
+          <i class="material-icons right">mail</i>Contacter <%= @project.refugee.first_name %>
+        </button>
+      </div>
+      <div class="col s12 m5">
+        <div class="margin-bottom-medium">
+          <h5 class="border-bottom-light padding-bottom-small">Contributeurs</h5>
+          <% 3.times do %>
+            <a class="tooltipped margin-bottom-medium" data-position="bottom" data-delay="50" data-tooltip="Anonyme">
+              <%= image_tag "user-placeholder.png", style: "width: 50px; margin-right: 10px" %>
+            </a>
+          <% end %>
+        </div>
+        <h5 class="border-bottom-light padding-bottom-small">
+          De quel pays est originaire <%= @project.refugee.first_name %>?
+        </h5>
+        <p class="center">
+          <%= image_tag "world-map", style: "width: 80%" %>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

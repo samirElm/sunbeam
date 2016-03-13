@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   include Pundit
 
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   # protect_from_forgery with: :exception
 
   # before_action :authenticate_user!, unless: :pages_controller?
@@ -23,5 +25,12 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:error] = I18n.t('controllers.application.user_not_authorized', default: "You can't access this page.")
     redirect_to(root_path)
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone_number, :picture]
+    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone_number, :picture]
   end
 end

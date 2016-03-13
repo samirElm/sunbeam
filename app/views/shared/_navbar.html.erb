@@ -1,0 +1,38 @@
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#" class="black-text">French</a></li>
+    <li><a href="#" class="black-text">English</a></li>
+    <li><a href="#" class="black-text">Arabic</a></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
+    <li><a href="#" class="black-text">French</a></li>
+    <li><a href="#" class="black-text">English</a></li>
+    <li><a href="#" class="black-text">Arabic</a></li>
+</ul>
+
+<nav>
+    <div class="nav-wrapper white navbar">
+        <%= link_to "Home", root_path, class: "brand-logo black-text", style: "padding-left: 5%" %>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                class="material-icons black-text">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#" class="black-text">Presentation</a></li>
+            <li><%= link_to "Projets", projects_path, class: "black-text" %></li>
+            <li><%= link_to "Agir", page_path("act"), class: "black-text" %></li>
+            <li><%= link_to "Contact", page_path("contact"), class: "black-text" %></li>
+            <li><%= link_to "Se connecter", new_user_session_path, class: "black-text" %></li>
+            <li><a class="dropdown-button black-text" href="#" data-activates="dropdown1">Language<i
+                    class="material-icons right">arrow_drop_down</i></a>
+            </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="#" class="black-text">Home</a></li>
+            <li><a href="#" class="black-text">Presentation</a></li>
+            <li><a href="#" class="black-text">Project</a></li>
+            <li><a href="#" class="black-text">Act</a></li>
+            <li><a href="#" class="black-text">Contact</a></li>
+            <li><a href="#" class="black-text">Login</a></li>
+            <li><a class="dropdown-button black-text" href="#" data-activates="dropdown2">Language<i class="material-icons right">arrow_drop_down</i></a>
+        </ul>
+    </div>
+</nav>
