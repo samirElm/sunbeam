@@ -89,3 +89,65 @@ header {
     -o-transition: none;
     transition: none;
 }
+
+#text-element {
+  h1 {
+    color: white;
+  }
+}
+
+#banner-bg-home{
+  position: relative;
+  margin-top: -26px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  opacity: 1;
+  background: black;
+  height: 600px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: image-url('background-home.png');
+    background-size: cover;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 2px 3px #272727;
+    height: 600px;
+  }
+}
+
+#position-text {
+  position: relative;
+  z-index: 1;
+  // because of ponctual banner (put 80px when ponctual banner active)
+  margin-top: 30px;
+  @media (max-width: 979px) {
+    margin-top: 0px;
+  }
+  letter-spacing: 1.5px;
+  h2 {
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #position-text {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-weight: 300;
+    }
+  }
+}
