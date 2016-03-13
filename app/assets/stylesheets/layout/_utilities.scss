@@ -24,7 +24,6 @@
   background: #3b5998;
 }
 
-
 // Custom CSS
 .padding-bottom-small {
   padding-bottom: 10px;
@@ -32,4 +31,99 @@
 .small-font-button {
   font-size: 12px;
   text-transform: none !important;
+}
+.custom-progress {
+  height: 8px !important;
+}
+.stats {
+  z-index: 10;
+  position: absolute;
+  top: 102px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.border-bottom-light {
+  border-bottom: 1px solid #eee;
+}
+.width-100 {
+  width: 100%;
+}
+.margin-top-large {
+  margin-top: 50px;
+}
+.margin-top-medium {
+  margin-top: 30px;
+}
+.margin-bottom-large {
+  margin-bottom: 50px;
+}
+.margin-bottom-medium {
+  margin-bottom: 30px;
+}
+.up-title {
+  color: #898989;
+  font-size: 24px !important;
+}
+.text-justify {
+  text-align: justify;
+}
+
+// Donate Button
+.donation_field {
+  position: relative;
+  &:before {
+    color: rgba(75,92,102,0.35);
+    font-size: 21px;
+    content: "€";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    left: 26px;
+    top: 22px;
+  }
+  .donation_amount {
+    box-sizing: border-box;
+    height: 68px;
+    width: 100%;
+    font-size: 24px;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-left: 45px;
+    padding-bottom: 19px;
+    line-height: normal;
+    transition: all 0.1s ease-out;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    &:focus {
+      border: 1px solid #26A69A;
+    }
+  }
+  .donate_button {
+    font-size: 18px;
+    font-weight: 500;
+    height: 60px;
+    line-height: 18px;
+    padding: 17px 44px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    text-transform: none;
+    outline: none;
+  }
+}
+
+// Override Materialize
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 80% !important;
+  }
+  .col {
+    padding: 0 2rem !important;
+  }
 }
