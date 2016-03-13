@@ -139,14 +139,14 @@
 
     </div>
 </div>
-<!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
-<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('select').material_select();
-        $(".button-collapse").sideNav();
-        $('.parallax').parallax();
-    });
-</script>
+
+<%= content_for(:after_js) do %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $('select').material_select();
+          $(".button-collapse").sideNav();
+          $('.parallax').parallax();
+      });
+  </script>
+<% end %>

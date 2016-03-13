@@ -1,0 +1,115 @@
+  <div class="row" style="margin-top: 100px;">
+<div id="login-page" class="col s12 m6">
+
+    <div class="col s12 z-depth-6 card-panel">
+
+      <form class="login-form">
+
+        <div class="row">
+
+          <div class="input-field col s12 center">
+
+            <h3 class="center login-form-text">Réfugiés</h3>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="input-field col s12">
+
+            <%= link_to "Se connecter", new_refugee_session_path, class: "btn waves-effect waves-light col s12" %>
+
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+<div id="login-page" class="col s12 m6">
+
+    <div class="col s12 z-depth-6 card-panel">
+
+      <form class="login-form">
+
+        <div class="row">
+
+          <div class="input-field col s12 center">
+
+            <h3 class="center login-form-text">Donateurs</h3>
+
+          </div>
+
+        </div>
+ <div class="row margin">
+
+          <div class="input-field col s12">
+
+            <i class="mdi-social-person-outline prefix"></i>
+
+            <input class="validate" id="email" type="email">
+
+            <label for="email" data-error="wrong" data-success="right" class="center-align">Email</label>
+
+          </div>
+
+        </div>
+
+        <div class="row margin">
+
+          <div class="input-field col s12">
+
+            <i class="mdi-action-lock-outline prefix"></i>
+
+            <input id="password" type="password">
+
+            <label for="password">Password</label>
+
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="input-field col s12">
+
+           <a href="login.html" class="btn waves-effect waves-light col s12">Login</a>
+
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+  #equip{
+    margin-left: 23.5%;
+  }
+  @media (max-width: 995px){
+    #equip{
+      margin-left: 18%;
+    }
+  }
+  @media (max-width: 600px){
+    #equip{
+      margin-left: 5%;
+    }
+  }
+  #login-page{
+    font-size: 1rem;
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("body").addClass('yellow lighten-2');
+  });
+</script>
