@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <h1>Les projets que vous suivez</h1>
+
+    <% @projects.each do |project| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s8 text-justify">
+              <div class="margin-bottom-medium">
+                <h5><%= project.title %></h5>
+                <p><%= project.description %></p>
+              </div>
+
+              <h5>Avancées du projet</h5>
+              <p class="border-bottom-light padding-bottom-small"><%= project.description %></p>
+              <p class="border-bottom-light padding-bottom-small padding-top-small">Nombre d'employés : 2</p>
+              <p class="border-bottom-light padding-bottom-small padding-top-small">Chiffre d'affaires mensuel : 1400€</p>
+            </div>
+            <div class="col s4 center">
+              <div class="margin-bottom-medium">
+                <h5 class="padding-bottom-small">Suivi de la collecte</h5>
+                <%= image_tag "progress-circle-100.png", style: "width: 60%" %>
+              </div>
+              <div>
+                <button class="btn">
+                  <i class="material-icons right">mail</i>Contacter <%= project.refugee.first_name %>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

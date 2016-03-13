@@ -6,23 +6,147 @@
   <%# TODO %>
 <% end %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h1>Welcome!</h1>
+<div class="row">
+    <header>
+        <div class="card z-depth-0 col s12 m5 offset-m1">
+            <div class="card-content black-text">
+                <span class="card-title flow-text">Title</span>
 
-      <h2>This is the homepage</h2>
+                <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequuntur
+                    deleniti
+                    dolorum exercitationem harum illum ipsa ipsam laboriosam, minima nam omnis placeat praesentium,
+                    provident quod, rem repellat reprehenderit repudiandae.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequuntur deleniti
+                    dolorum exercitationem harum illum ipsa ipsam laboriosam, minima nam omnis placeat praesentium,
+                    provident quod, rem repellat reprehenderit repudiandae.
+                </p>
 
-      <p>
-        Find me in <code>app/views/pages/home.html.erb</code>
-      </p>
+                <div class="card-action" style="border: none">
+                    <a class="waves-effect waves-yellow lighten-2 btn-flat right black-text flow-text">Start</a>
+                </div>
 
-      <p>
-        Thanks to the <a href="https://github.com/thoughtbot/high_voltage">high_voltage</a>
-        gem, if you need more static pages (like <code>/contact</code> or <code>/about-us</code>),
-        just create a file in the <code>app/views/pages</code> folder, the route will be automatically
-        available without you adding any controller or touching the <code>config/routes.rb</code> file!
-      </p>
-    </div>
-  </div>
+            </div>
+        </div>
+
+        <div class="col m5 s12" style="margin-top: 8px">
+            <iframe style="margin-top: 4px" width="100%" height="391" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </header>
+
+
 </div>
+
+<!-- end header -->
+
+<div class="parallax-container hide-on-small-only">
+    <div class="parallax"><%= image_tag "crowdfunding2.jpg" %></div>
+</div>
+
+<div class="row">
+    <h3 class="center most-rated">Most rated projects</h3>
+
+    <div class="col s12 m4">
+        <div class="card small">
+            <div class="card-image">
+                <%= image_tag "profil.jpg" %>
+                <span class="card-title">John Doe</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ducimus eius
+                    esse est provident?
+                    Accusantium eos exercitationem facilis impedit nulla officia quas sed. Debitis inventore, iusto
+                    omnis praesentium provident reiciendis!</p>
+            </div>
+            <div class="card-action">
+                <a href="#">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card small">
+            <div class="card-image">
+                <%= image_tag "profil.jpg" %>
+                <span class="card-title">Jane Doe</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur culpa
+                    dolorem eveniet,
+                    expedita facere impedit ipsam nisi officiis sapiente sit sunt unde voluptates. Consectetur
+                    laudantium reprehenderit repudiandae sunt veritatis!</p>
+            </div>
+            <div class="card-action">
+                <a href="#">See More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card small">
+            <div class="card-image">
+                <%= image_tag "profil.jpg" %>
+                <span class="card-title">Billy Doe</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut corporis dolorem
+                    doloribus esse
+                    explicabo minima quae, quos repellat voluptas voluptates? Aperiam cum error fugiat id minus
+                    placeat quos sed vel?</p>
+            </div>
+            <div class="card-action">
+                <a href="#">See More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row see-all">
+    <div class="col m4 offset-m4 s12">
+        <a class="waves-effect waves-light btn-large col m12 s12 yellow accent-1"><span
+                class="black-text">See all projects</span></a>
+    </div>
+</div>
+
+
+<div class="parallax-container hide-on-small-only">
+    <div class="parallax"><%= image_tag "crowdfunding2.jpg" %></div>
+</div>
+
+<div class="row">
+    <div class="col m4 s12 center donation offset-m1">
+        <h4>Donate for a project</h4>
+
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti maiores nesciunt saepe
+            velit
+            voluptates. Adipisci architecto consequatur cumque, dolorum facilis illum in ipsam maiores nihil quas,
+            reiciendis ullam veritatis vitae!
+        </p>
+        <a class="waves-effect waves-light btn-large col m4 s12 yellow accent-1 offset-m4"><span
+                class="black-text">Donate</span></a>
+    </div>
+    <div class="col m5 s12 center donation">
+        <h4>Global Donation</h4>
+
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum in laudantium
+            maiores modi nam
+            necessitatibus nihil officiis optio qui quia quibusdam rerum, sequi ullam voluptas. A modi velit
+            voluptas.</p>
+        <a class="waves-effect waves-light btn-large col m4 s12 yellow accent-1 offset-m4 donate-btn"><span
+                class="black-text">Donate</span></a>
+
+    </div>
+</div>
+<!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+        $(".button-collapse").sideNav();
+        $('.parallax').parallax();
+    });
+</script>

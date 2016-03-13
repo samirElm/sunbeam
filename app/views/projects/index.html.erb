@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="row center-align">
-      <h1>Rencontrez les <br> réfugiés-entrepreneurs</h1>
+      <h1>Découvrez les projets</h1>
     </div>
 
     <% @projects.each do |project| %>
@@ -42,10 +42,10 @@
       </div>
     <% end %>
   </div>
-  <div class="row">
+  <div class="row center">
     <% if refugee_signed_in? %>
       <%= link_to new_project_path, class: "waves-effect waves-light btn" do %>
-        <i class="material-icons right">input</i>Créer un projet
+        <i class="material-icons right">input</i>Proposer un nouveau projet
       <% end %>
     <% end %>
   </div>

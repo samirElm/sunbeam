@@ -2,3 +2,90 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.parallax-container{
+    margin: 100px 0;
+}
+
+header {
+    margin-top: 100px;
+}
+
+.card{
+    margin: 20px 50px;
+}
+
+.see-all{
+    margin-top: 50px;
+}
+
+.most-rated{
+    margin-bottom: 50px;
+}
+.donation{
+    margin: 100px 80px;
+}
+.donate-btn{
+    position: relative;
+    bottom: -40px;
+}
+.act{
+    margin-top: 5%;
+}
+
+.act-first-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.act-last-btn{
+    margin-bottom: 100px;
+}
+.done-list li i{
+    position: relative;
+    top: 17PX;
+    margin-right: 20px;
+}
+.button-act {
+    line-height: 190%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 250px;
+    height: 90px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: bolder;
+    border: 4px solid rgb(247, 255, 69);
+    color: rgb(255, 222, 9);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    background: rgba(0,0,0,0);
+    -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+    transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.button-act:hover {
+    border: 4px solid rgb(255, 243, 13);
+    color: rgba(255,255,255,1);
+    background: rgb(255, 243, 13);
+}
+
+.button-act:active {
+    border: 4px solid rgb(255, 246, 125);
+    background: rgb(255, 246, 125);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
