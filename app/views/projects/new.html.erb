@@ -8,7 +8,9 @@
       <%= f.input :steps, label: "Les grandes étapes du projet" %>
       <%= f.input :needs, label: "De quoi avez-vous besoin ?" %>
       <%= f.input :total_budget, label: "Budget total" %>
-      <%= f.input :picture, as: :file, label: "Photo" %>
+      <div class="margin-bottom-medium">
+        <%= f.input :picture, as: :file, label: "Photo" %>
+      </div>
 
       <%= f.button :submit %>
     <% end %>

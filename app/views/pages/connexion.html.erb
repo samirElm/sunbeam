@@ -1,0 +1,36 @@
+
+
+<div class="row center">
+  <h1>Qui êtes-vous ?</h1>
+  <div class="col m6 s12 center">
+    <%= link_to "Réfugiés", new_refugee_session_path, class: "waves-effect waves-light btn blue", style: "margin-top:20%;margin-bottom:25%;width:300px;height:100px;font-size: 40px;padding-top: 30px;" %>
+  </div>
+  <div class="col m6 s12 center">
+    <%= link_to "Donateur", new_user_session_path, class: "waves-effect waves-light btn blue", style: "margin-top:20%;margin-bottom:25%;width:300px;height:100px;font-size: 40px;padding-top: 30px;" %>
+  </div>
+</div>
+
+  <style>
+    #equip{
+      margin-left: 23.5%;
+    }
+    @media (max-width: 995px){
+      #equip{
+        margin-left: 18%;
+      }
+    }
+    @media (max-width: 600px){
+      #equip{
+        margin-left: 5%;
+      }
+    }
+    #login-page{
+      font-size: 1rem;
+    }
+  </style>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("body").addClass('yellow lighten-2');
+  });
+</script>

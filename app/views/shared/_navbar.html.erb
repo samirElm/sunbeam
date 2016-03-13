@@ -10,28 +10,73 @@
     <li><a href="#" class="black-text">Arabic</a></li>
 </ul>
 
+<% if user_signed_in? %>
+  <ul id="dropdown3" class="dropdown-content">
+      <li><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: " black-text" %></li>
+      <li><a href="#" class="black-text">Suivi des projets</a></li>
+  </ul>
+
+  <ul id="dropdown4" class="dropdown-content">
+      <li><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: " black-text" %></li>
+      <li><%= link_to "Suivi des projets", page_path('panel_user'), class: "black-text" %></li>
+  </ul>
+<% end %>
+
+<% if refugee_signed_in? %>
+  <ul id="dropdown5" class="dropdown-content">
+      <li><%= link_to "Se déconnecter", destroy_refugee_session_path, method: :delete, class: " black-text" %></li>
+      <li><%= link_to "Suivi des projets", page_path('panel_refugee'), class: "black-text" %></li>
+  </ul>
+
+  <ul id="dropdown6" class="dropdown-content">
+      <li><%= link_to "Se déconnecter", destroy_refugee_session_path, method: :delete, class: " black-text" %></li>
+      <li><%= link_to "Suivi des projets", page_path('panel_refugee'), class: "black-text" %></li>
+  </ul>
+<% end %>
+
 <nav>
     <div class="nav-wrapper white navbar">
-        <%= link_to "Home", root_path, class: "brand-logo black-text", style: "padding-left: 5%" %>
+        <%= link_to root_path, class: "brand-logo black-text", style: "padding-left: 5%; padding-top:5px;" do %>
+          <%= image_tag 'logo.png', style: "height: 50px;" %>
+        <% end %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i
                 class="material-icons black-text">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#" class="black-text">Presentation</a></li>
+            <li><%= link_to "Présentation", page_path("about"), class: "black-text" %></li>
             <li><%= link_to "Projets", projects_path, class: "black-text" %></li>
             <li><%= link_to "Agir", page_path("act"), class: "black-text" %></li>
             <li><%= link_to "Contact", page_path("contact"), class: "black-text" %></li>
-            <li><%= link_to "Se connecter", new_user_session_path, class: "black-text" %></li>
+            <% if refugee_signed_in? || user_signed_in? %>
+
+            <% else %>
+              <li><%= link_to "Se connecter", page_path('connexion'), class: "black-text" %></li>
+            <% end %>
+            <% if user_signed_in? %>
+              <li><a class="dropdown-button black-text" href="#" data-activates="dropdown4">Mon compte<i
+                    class="material-icons right">arrow_drop_down</i></a>
+            <% end %>
+            <% if refugee_signed_in? %>
+              <li><a class="dropdown-button black-text" href="#" data-activates="dropdown5">Mon compte<i
+                    class="material-icons right">arrow_drop_down</i></a>
+            <% end %>
             <li><a class="dropdown-button black-text" href="#" data-activates="dropdown1">Language<i
                     class="material-icons right">arrow_drop_down</i></a>
             </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li><a href="#" class="black-text">Home</a></li>
-            <li><a href="#" class="black-text">Presentation</a></li>
+            <li><%= link_to "Présentation", page_path("about"), class: "black-text" %></li>
             <li><a href="#" class="black-text">Project</a></li>
             <li><a href="#" class="black-text">Act</a></li>
             <li><a href="#" class="black-text">Contact</a></li>
             <li><a href="#" class="black-text">Login</a></li>
+
+            <% if user_signed_in? %>
+              <li><a class="dropdown-button black-text" href="#" data-activates="dropdown3">Mon compte<i class="material-icons right">arrow_drop_down</i></a>
+            <% end %>
+            <% if refugee_signed_in? %>
+              <li><a class="dropdown-button black-text" href="#" data-activates="dropdown6">Mon compte<i class="material-icons right">arrow_drop_down</i></a>
+            <% end %>
             <li><a class="dropdown-button black-text" href="#" data-activates="dropdown2">Language<i class="material-icons right">arrow_drop_down</i></a>
         </ul>
     </div>
